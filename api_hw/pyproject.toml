@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "api-hw"
+version = "0.1.0"
+description = ""
+authors = ["Dmitrii Nasedkin <2_tone@mail.ru>"]
+readme = "README.md"
+packages = [{include = "api_hw"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "7.2.1"
+selene = "2.0.0b17"
+voluptuous = "0.13.1"
+pytest-voluptuous = "1.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
