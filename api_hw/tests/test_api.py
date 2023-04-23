@@ -53,11 +53,12 @@ def test_delay_page_number():
     assert response.json()['page'] == 1
 
 
-def test_count_users():
+def test_count_users_and_status():
     url = 'https://reqres.in/api/users'
     response: Response = requests.get(url, params={'delay': 3})
     per_page = response.json()['per_page']
     assert per_page <= 6
+    assert response.status_code == 200
 
 
 def test_delay_response_schema():
